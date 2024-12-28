@@ -50,26 +50,26 @@ const bottomLinks = [
       },
     ],
   },
-  {
-    header: 'Legal',
-    links: [
-      {
-        name: 'Privacy',
-        href: '/privacy',
-        isExternal: false,
-      },
-      {
-        name: '404',
-        href: '/404',
-        isExternal: false,
-      },
-      {
-        name: 'Styleguide',
-        href: '/styleguide',
-        isExternal: false,
-      },
-    ],
-  },
+  // {
+  //   header: 'Legal',
+  //   links: [
+  //     {
+  //       name: 'Privacy',
+  //       href: '/privacy',
+  //       isExternal: false,
+  //     },
+  //     {
+  //       name: '404',
+  //       href: '/404',
+  //       isExternal: false,
+  //     },
+  //     {
+  //       name: 'Styleguide',
+  //       href: '/styleguide',
+  //       isExternal: false,
+  //     },
+  //   ],
+  // },
 ];
 ---
 
@@ -81,22 +81,16 @@ const bottomLinks = [
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col justify-between gap-12 sm:gap-16 lg:flex-row">
       <div class="flex max-w-sm flex-col items-start gap-6 sm:gap-8">
-        <img
-          class="h-8 w-auto"
-          width="65"
-          height="40"
-          :src="$store.theme.isDark ? '/assets/logo-inverted.svg' : '/assets/logo.svg'"
-          alt="Stone"
-        />
+        <span class=" w-1 h-1 py-3  m-[-1px] clip-rect-0 whitespace-nowrap border-0 text-2xl"
+        >Innova Software House</span>
         <p class="text-primary-950/70 dark:text-primary-200/70 text-base">
-          Stone is a premium Astro theme specially designed for Business, Marketing, SaaS and
-          Startup websites.
+          Innova is a leading software house specializing in custom, innovative software solutions that drive business growth. Our expert team delivers scalable, efficient, and reliable digital solutions tailored to your needs. 
         </p>
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2023 Stone</p>
+        <p class="text-primary-950/70 dark:text-primary-200/70 text-sm">© 2025 Innova Software House</p>
       </div>
 
       <!-- Bottom links -->
-      <div class="grid max-w-xl flex-1 grid-cols-1 gap-8 sm:grid-cols-3">
+      <div class="grid max-w-xl flex-1 grid-cols-1 gap-8 sm:grid-cols-2">
         {
           bottomLinks.map((group) => (
             <div class="flex flex-col gap-4">

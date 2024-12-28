@@ -4,19 +4,55 @@ const services = [
     step: '01',
     name: 'Design',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Every step of your project is crucial to the excellence of our services. From layouts, banners, business cards, visual identity, corporate reports, yearbooks, books, magazines, newspapers, advertisements, and more. Our goal is to meet all our clients needs through personalized and high-quality service.',
   },
   {
     step: '02',
     name: 'Develop',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We have a qualified team of programmers, system analysts, and designers. Our websites are developed using the latest web standards, such as W3C compliance, responsive design, optimization for performance, information architecture, design, code indentation, SEO, and other key concepts.',
   },
   {
     step: '03',
-    name: 'Maintain',
+    name: 'Strategy',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We employ rigorous planning in every project we execute. We design advertising campaigns aimed at increasing your ROI (Return on Investment) by driving demand and, consequently, boosting our clients profits. Every stage of a campaign is strategically executed according to the developed marketing plan. Banners, floaters, corporate communication, sponsored links, and social media are some of the digital marketing services offered by Innova.', 
+  },
+  {
+    step: '04',
+    name: 'Mailing',
+    description:
+      'Our email marketing services include strategically designing clean and professional newsletter layouts that reflect the client’s desired image to their target audience. Emails are dispatched through our dedicated server, which monitors and analyzes performance using detailed graphs and reports. This feedback helps establish strategies to enhance communication efficiency. All email databases are confidential and securely stored on our exclusive server, ensuring privacy and reliability.',
+  },
+  {
+    step: '05',
+    name: 'E-Commerce',
+    description:
+      'Online stores have been a growing trend in the market, significantly boosting the profits of companies that sell products and/or services on the web. However, quality planning and development are necessary to effectively reach customers. Benchmarking, target audience, visual identity creation, SEO strategy, among other factors, are very important to achieve a good result. In order for our clients to perform well and with high performance, we use the Magento tool, a differentiated, robust, and secure E-commerce platform, used by the best companies worldwide.',
+  },
+  {
+    step: '06',
+    name: 'Social Media',
+    description:
+      'Social media are powerful tools for social interaction and communication. When applied to websites, they can be used for various social actions focused on Marketing and Branding. Additionally, social media can also build measurable connections with Google Ads SEO service, generating significant results in the short term.Some media platforms used: Facebook, Instagram, Google+, and YouTube.',
+  },
+  {
+    step: '07',
+    name: 'SEO',
+    description:
+      'SEO is the tool responsible for increasing your companys profit through a website strategically programmed to boost online visits. This website optimization process is performed according to international standards and guidelines, ensuring that both the content and the use of internal codes comply with the indexing rules of internet search engines: Google, Bing, and Yahoo. Your website with SEO and international W3C standards will significantly increase your visibility in organic search results on internet search engines.',
+  },
+  {
+    step: '08',
+    name: 'Data management',
+    description:
+      'Data management on the web, as well as monitoring your website, are additional services provided by Innova. This process is carried out through Googles support tools, where our clients receive reports and graphs about their traffic, relevant information for potential contingency plans, and mainly to assist them in their decision-making process.',
+  },
+  {
+    step: '09',
+    name: 'Sponsored Links',
+    description:
+      'Data management on the web, as well as monitoring your website, are additional services provided by Innova. This process is carried out through Googles support tools, where our clients receive reports and graphs about their traffic, relevant information for potential contingency plans, and mainly to assist them in their decision-making process.',
   },
 ];
 ---
@@ -28,11 +64,11 @@ const services = [
       <div class="grid gap-8 lg:grid-cols-3">
         {
           services.map((service) => (
-            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8 cursor-pointer">
               <p class="text-sm">{service.step}</p>
               <div class="flex flex-col gap-4">
                 <h3 class="text-xl font-medium">{service.name}</h3>
-                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-md">
                   {service.description}
                 </p>
               </div>

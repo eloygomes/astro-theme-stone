@@ -5,13 +5,13 @@ const values = [
       ref: '01',
       name: 'Excellence',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'At Innova, we strive for excellence in everything we do. Our commitment to delivering high-quality solutions ensures that every project is executed to the highest standards. We take pride in our work, continuously improving our processes and capabilities to provide unmatched value to our clients.',
     },
     {
       ref: '02',
       name: 'Innovation',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Innovation is at the core of Innova’s approach. We constantly explore new technologies, tools, and methods to create groundbreaking solutions that meet the ever-evolving needs of the market. Our team thrives on creativity and forward-thinking, always looking for ways to push boundaries and deliver exceptional results.',
     },
   ],
   [
@@ -19,13 +19,13 @@ const values = [
       ref: '03',
       name: 'Teamwork',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Collaboration is key to our success. At Innova, we believe in the power of teamwork to achieve our goals. By fostering an environment of trust and open communication, we bring together diverse expertise and perspectives, enabling us to solve complex challenges and deliver results that exceed expectations.',
     },
     {
       ref: '04',
       name: 'Respect',
       description:
-        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+        'Respect for our clients, team members, and partners is fundamental to the way we operate. We believe in building strong, lasting relationships based on mutual respect, integrity, and understanding. This foundation ensures a positive and productive environment for everyone involved, allowing us to achieve shared success.',
     },
   ],
 ];
@@ -40,11 +40,11 @@ const values = [
           values.map((column, index) => (
             <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
               {column.map((value) => (
-                <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+                <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
                   <p class="text-sm">{value.ref}</p>
                   <div class="flex flex-col gap-4">
                     <h3 class="text-xl font-medium">{value.name}</h3>
-                    <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                    <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
                       {value.description}
                     </p>
                   </div>
