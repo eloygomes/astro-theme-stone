@@ -1,9 +1,15 @@
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-4 sm:gap-6">
+    <div class="flex flex-col gap-4 sm:gap-6" x-show="$store.language.current === 'en'">
       <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">About</h1>
       <p class="mx-auto max-w-xl text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
         Soluctions to your business needs
+      </p>
+    </div>
+    <div class="flex flex-col gap-4 sm:gap-6" x-show="$store.language.current === 'pt'">
+      <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">Sobre</h1>
+      <p class="mx-auto max-w-xl text-lg text-primary-950/70 dark:text-primary-200/70 sm:text-xl">
+        Soluções para suas necessidades de negócio
       </p>
     </div>
   </div>

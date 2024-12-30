@@ -29,15 +29,68 @@ const values = [
     },
   ],
 ];
+
+const valuesBR = [
+  [
+    {
+      ref: '01',
+      name: 'Excelência',
+      description:
+        'Na Innova, buscamos a excelência em tudo o que fazemos. Nosso compromisso em entregar soluções de alta qualidade garante que cada projeto seja executado pelos mais altos padrões. Temos orgulho do nosso trabalho, aprimorando continuamente nossos processos e capacidades para oferecer um valor incomparável aos nossos clientes.',
+    },
+    {
+      ref: '02',
+      name: 'Inovação',
+      description:
+        'A inovação está no coração da abordagem da Innova. Estamos sempre explorando novas tecnologias, ferramentas e métodos para criar soluções revolucionárias que atendem às necessidades em constante evolução do mercado. Nossa equipe prospera com criatividade e pensamento visionário, sempre buscando maneiras de ultrapassar limites e entregar resultados excepcionais.',
+    },
+  ],
+  [
+    {
+      ref: '03',
+      name: 'Trabalho em Equipe',
+      description:
+        'A colaboração é a chave para o nosso sucesso. Na Innova, acreditamos no poder do trabalho em equipe para alcançar nossos objetivos. Ao promover um ambiente de confiança e comunicação aberta, reunimos diversas expertises e perspectivas, permitindo-nos resolver desafios complexos e entregar resultados que superam as expectativas.',
+    },
+    {
+      ref: '04',
+      name: 'Respeito',
+      description:
+        'O respeito pelos nossos clientes, membros da equipe e parceiros é fundamental para a maneira como operamos. Acreditamos em construir relacionamentos fortes e duradouros, baseados no respeito mútuo, integridade e compreensão. Essa base garante um ambiente positivo e produtivo para todos os envolvidos, permitindo-nos alcançar o sucesso compartilhado.',
+    },
+  ],
+];
 ---
 
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-8 lg:gap-12">
+    <div class="flex flex-col gap-8 lg:gap-12" x-show="$store.language.current === 'en'">
       <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our Values</h2>
       <div class="grid gap-8 lg:grid-cols-2">
         {
           values.map((column, index) => (
+            <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
+              {column.map((value) => (
+                <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+                  <p class="text-sm">{value.ref}</p>
+                  <div class="flex flex-col gap-4">
+                    <h3 class="text-xl font-medium">{value.name}</h3>
+                    <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex flex-col gap-8 lg:gap-12" x-show="$store.language.current === 'pt'">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Nossos Valores</h2>
+      <div class="grid gap-8 lg:grid-cols-2">
+        {
+          valuesBR.map((column, index) => (
             <div class:list={['space-y-8', index === 1 && 'lg:mt-16']}>
               {column.map((value) => (
                 <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">

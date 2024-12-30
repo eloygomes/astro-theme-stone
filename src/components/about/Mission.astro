@@ -17,6 +17,25 @@ const stats = [
   //   value: "'9'",
   // },
 ];
+
+const statsBR = [
+  {
+    name: 'Anos',
+    value: '6',
+  },
+  // {
+  //   name: 'Experts',
+  //   value: '15',
+  // },
+  {
+    name: 'Projetos',
+    value: '122',
+  },
+  // {
+  //   name: 'Awards',
+  //   value: "'9'",
+  // },
+];
 ---
 
 <section class="py-16 sm:py-20">
@@ -31,7 +50,7 @@ const stats = [
       />
       <div class="flex flex-col gap-10">
         <!-- Mission description -->
-        <div class="space-y-8 sm:space-y-12">
+        <div class="space-y-8 sm:space-y-12" x-show="$store.language.current === 'en'">
           <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Our mission</h2>
           <div class="space-y-6">
             <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
@@ -59,10 +78,50 @@ const stats = [
           </div>
         </div>
 
+        <div class="space-y-8 sm:space-y-12" x-show="$store.language.current === 'pt'">
+          <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Nossa missão</h2>
+          <div class="space-y-6">
+            <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
+              Innova especializa-se em desenvolver soluções de software personalizadas, orientando
+              seu projeto desde a fase de Discovery até a Product Concept e até a Build. Garantimos
+              um processo suave com comunicação precisa, execução rápida e uma compreensão profunda
+              tanto de requisitos tecnológicos quanto de necessidades comerciais. Nossa abordagem
+              garante que seu projeto seja construído de forma eficiente e alinhado perfeitamente
+              com seus objetivos.
+            </p>
+            <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
+              Nossa equipe combina proficiência técnica com acústica empresarial para entregar
+              soluções que não apenas são eficazes, mas também estratégicamente impactantes. Ao
+              entender as desafios exclusivos de cada cliente, garantimos que cada solução de
+              software seja adaptada para atender aos objetivos específicos da empresa. Nossa
+              processo foi projetado para ser ágil, permitindo desenvolvimento rápido sem
+              comprometer a qualidade.
+            </p>
+            <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
+              Innova também aproveita o poder da Inteligência Artificial para impulsionar a inovação
+              e aumentar a produtividade. Usamos um framework próprio para criar soluções
+              inteligentes que otimizem processos comerciais e promovam crescimento. Se você estiver
+              procurando simplificar operações ou aprimorar capacidades de tomada de decisão, nossas
+              soluções inteligentes são projetadas para maximizar sua eficiência empresarial e
+              alcançar sucesso.
+            </p>
+          </div>
+        </div>
+
         <!-- Stats -->
-        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2" x-show="$store.language.current === 'en'">
           {
             stats.map((stat) => (
+              <div class="rounded-3xl border border-primary-900/10 p-6 dark:border-primary-300/10">
+                <dt class="text-base">{stat.name}</dt>
+                <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>
+              </div>
+            ))
+          }
+        </dl>
+        <dl class="grid grid-cols-1 gap-6 sm:grid-cols-2" x-show="$store.language.current === 'pt'">
+          {
+            statsBR.map((stat) => (
               <div class="rounded-3xl border border-primary-900/10 p-6 dark:border-primary-300/10">
                 <dt class="text-base">{stat.name}</dt>
                 <dd class="text-3xl font-medium tracking-tight">{stat.value}</dd>

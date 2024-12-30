@@ -16,7 +16,7 @@ const services = [
     step: '03',
     name: 'Strategy',
     description:
-      'We employ rigorous planning in every project we execute. We design advertising campaigns aimed at increasing your ROI (Return on Investment) by driving demand and, consequently, boosting our clients profits. Every stage of a campaign is strategically executed according to the developed marketing plan. Banners, floaters, corporate communication, sponsored links, and social media are some of the digital marketing services offered by Innova.', 
+      'We employ rigorous planning in every project we execute. We design advertising campaigns aimed at increasing your ROI (Return on Investment) by driving demand and, consequently, boosting our clients profits. Every stage of a campaign is strategically executed according to the developed marketing plan. Banners, floaters, corporate communication, sponsored links, and social media are some of the digital marketing services offered by Innova.',
   },
   {
     step: '04',
@@ -55,20 +55,103 @@ const services = [
       'Data management on the web, as well as monitoring your website, are additional services provided by Innova. This process is carried out through Googles support tools, where our clients receive reports and graphs about their traffic, relevant information for potential contingency plans, and mainly to assist them in their decision-making process.',
   },
 ];
+
+const servicesBR = [
+  {
+    step: '01',
+    name: 'Design',
+    description:
+      'Cada etapa do seu projeto é crucial para a excelência dos nossos serviços. Desde layouts, banners, cartões de visita, identidade visual, relatórios corporativos, anuários, livros, revistas, jornais, anúncios e muito mais. Nosso objetivo é atender a todas as necessidades dos nossos clientes por meio de um atendimento personalizado e de alta qualidade.',
+  },
+  {
+    step: '02',
+    name: 'Desenvolvimento',
+    description:
+      'Contamos com uma equipe qualificada de programadores, analistas de sistemas e designers. Nossos sites são desenvolvidos utilizando os mais recentes padrões da web, como conformidade com o W3C, design responsivo, otimização de performance, arquitetura da informação, design, indentação de código, SEO e outros conceitos importantes.',
+  },
+  {
+    step: '03',
+    name: 'Estratégia',
+    description:
+      'Empregamos um planejamento rigoroso em cada projeto que executamos. Criamos campanhas publicitárias com o objetivo de aumentar o seu ROI (Retorno sobre o Investimento) ao impulsionar a demanda e, consequentemente, aumentar os lucros dos nossos clientes. Cada estágio de uma campanha é executado estrategicamente de acordo com o plano de marketing desenvolvido. Banners, pop-ups, comunicação corporativa, links patrocinados e mídias sociais são alguns dos serviços de marketing digital oferecidos pela Innova.',
+  },
+  {
+    step: '04',
+    name: 'E-mail Marketing',
+    description:
+      'Nossos serviços de e-mail marketing incluem o design estratégico de layouts de boletins informativos limpos e profissionais, refletindo a imagem desejada pelo cliente para seu público-alvo. Os e-mails são enviados através de nosso servidor dedicado, que monitora e analisa o desempenho por meio de gráficos e relatórios detalhados. Esse feedback ajuda a estabelecer estratégias para melhorar a eficiência da comunicação. Todos os bancos de dados de e-mails são confidenciais e armazenados com segurança em nosso servidor exclusivo, garantindo privacidade e confiabilidade.',
+  },
+  {
+    step: '05',
+    name: 'E-Commerce',
+    description:
+      'Lojas online têm sido uma tendência crescente no mercado, aumentando significativamente os lucros das empresas que vendem produtos e/ou serviços na web. No entanto, é necessário um planejamento e desenvolvimento de qualidade para alcançar os clientes de forma eficaz. Benchmarking, público-alvo, criação de identidade visual, estratégia de SEO, entre outros fatores, são muito importantes para alcançar um bom resultado. Para que nossos clientes tenham um desempenho de alto nível, utilizamos a ferramenta Magento, uma plataforma de E-commerce diferenciada, robusta e segura, usada pelas melhores empresas do mundo.',
+  },
+  {
+    step: '06',
+    name: 'Mídias Sociais',
+    description:
+      'As mídias sociais são poderosas ferramentas de interação e comunicação social. Quando aplicadas a sites, podem ser usadas para diversas ações sociais voltadas para Marketing e Branding. Além disso, as mídias sociais também podem construir conexões mensuráveis com o serviço de SEO do Google Ads, gerando resultados significativos no curto prazo. Algumas das plataformas de mídia utilizadas: Facebook, Instagram, Google+ e YouTube.',
+  },
+  {
+    step: '07',
+    name: 'SEO',
+    description:
+      'SEO é a ferramenta responsável por aumentar os lucros da sua empresa. A otimização para mecanismos de busca envolve estratégias de conteúdo e técnicas que melhoram a visibilidade do seu site nos resultados orgânicos dos motores de busca, como o Google. Com isso, sua empresa alcança mais visitantes qualificados, gerando mais conversões e, consequentemente, mais vendas. Implementamos práticas como pesquisa de palavras-chave, otimização de páginas, link building, e análise de resultados, tudo voltado para melhorar o posicionamento do seu site.',
+  },
+  {
+    step: '08',
+    name: 'Publicidade Online',
+    description:
+      'A publicidade online é uma das formas mais eficientes de alcançar seu público-alvo e gerar conversões rápidas. Utilizamos campanhas pagas em plataformas como Google Ads, Facebook Ads, Instagram Ads, entre outras, para maximizar os resultados. Com segmentação precisa e estratégias de lances otimizados, garantimos que seu investimento em anúncios traga um retorno significativo. Nossos especialistas criam campanhas personalizadas que se alinham aos seus objetivos de negócios, com relatórios detalhados para acompanhamento de desempenho.',
+  },
+  {
+    step: '09',
+    name: 'Suporte e Manutenção',
+    description:
+      'Após o lançamento de seu site, oferecemos suporte contínuo e serviços de manutenção para garantir que tudo funcione perfeitamente. Realizamos atualizações regulares, correções de erros e melhorias contínuas para manter seu site seguro, atualizado e alinhado com as melhores práticas da web. Nossa equipe está disponível para resolver quaisquer problemas rapidamente, garantindo a operação estável e eficiente do seu site a longo prazo.',
+  },
+];
 ---
 
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-12 sm:gap-16">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Services</h2>
-      <div class="grid gap-8 lg:grid-cols-3">
+      <h2
+        class="text-3xl font-medium tracking-tight sm:text-4xl"
+        x-show="$store.language.current === 'en'"
+      >
+        Services
+      </h2>
+      <h2
+        class="text-3xl font-medium tracking-tight sm:text-4xl"
+        x-show="$store.language.current === 'pt'"
+      >
+        Serviços
+      </h2>
+      <div class="grid gap-8 lg:grid-cols-3" x-show="$store.language.current === 'en'">
         {
           services.map((service) => (
-            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8 cursor-pointer">
+            <div class="flex cursor-pointer flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
               <p class="text-sm">{service.step}</p>
               <div class="flex flex-col gap-4">
                 <h3 class="text-xl font-medium">{service.name}</h3>
-                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-md">
+                <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+      <div class="grid gap-8 lg:grid-cols-3" x-show="$store.language.current === 'pt'">
+        {
+          servicesBR.map((service) => (
+            <div class="flex cursor-pointer flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{service.name}</h3>
+                <p class="sm:text-md text-base text-primary-950/70 dark:text-primary-200/70">
                   {service.description}
                 </p>
               </div>

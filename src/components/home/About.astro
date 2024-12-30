@@ -1,18 +1,53 @@
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="grid gap-12 lg:grid-cols-3 lg:gap-8">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">About</h2>
+      <h2
+        class="text-3xl font-medium tracking-tight sm:text-4xl"
+        x-show="$store.language.current === 'en'"
+      >
+        About
+      </h2>
+      <h2
+        class="text-3xl font-medium tracking-tight sm:text-4xl"
+        x-show="$store.language.current === 'pt'"
+      >
+        Sobre
+      </h2>
       <div class="flex flex-col items-start gap-8 sm:gap-10 lg:col-span-2">
-        <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
-          Innova is a digital agency passionate about technology and its power to connect people anywhere in the world. Our focus is to bring together businesses, clients, and partners through connectivity, and for that, we have a team of experts committed to delivering the best in every project.
-
-To help Innova achieve the best online positions for each client, we have a wide range of resources, immense capability, and an infinite desire to innovate.
+        <p
+          class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg"
+          x-show="$store.language.current === 'en'"
+        >
+          Innova is a digital agency passionate about technology and its power to connect people
+          anywhere in the world. Our focus is to bring together businesses, clients, and partners
+          through connectivity, and for that, we have a team of experts committed to delivering the
+          best in every project. To help Innova achieve the best online positions for each client,
+          we have a wide range of resources, immense capability, and an infinite desire to innovate.
+        </p>
+        <p
+          class="text-base text-primary-950/70 dark:text-primary-200/70 sm:text-lg"
+          x-show="$store.language.current === 'pt'"
+        >
+          Innova é uma agência digital apaixonada por tecnologia e sua poderosa capacidade de
+          conectar pessoas em todo o mundo. Nossa foco é unir empresas, clientes e parceiros através
+          da conexão, e para isso, temos uma equipe de especialistas comprometidos em entregar o
+          melhor em cada projeto. Para ajudar Innova a alcançar as melhores posições online para
+          cada cliente, temos uma ampla gama de recursos, capacidade imensura e um desejo infinito
+          de inovar.
         </p>
         <a
           href="/about"
-          class="bg-primary-600 dark:bg-primary-400 hover:bg-primary-700 dark:hover:bg-primary-300 focus-visible:outline-primary-600 dark:focus-visible:outline-primary-400 dark:text-primary-950 inline-flex items-center justify-center rounded-full border border-transparent px-5 py-3 text-base font-medium text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+          x-show="$store.language.current === 'en'"
         >
           Read about us
+        </a>
+        <a
+          href="/about"
+          class="inline-flex items-center justify-center rounded-full border border-transparent bg-primary-600 px-5 py-3 text-base font-medium text-white transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-400 dark:text-primary-950 dark:hover:bg-primary-300 dark:focus-visible:outline-primary-400"
+          x-show="$store.language.current === 'pt'"
+        >
+          Saiba mais
         </a>
       </div>
     </div>

@@ -22,16 +22,50 @@ const testimonials = [
       '"Working with Innova was an absolute game-changer for me. They approached my project with a clear understanding of my needs and delivered top-quality results. Their ability to execute quickly without sacrificing creativity is something I truly value."',
   },
 ];
+
+const testimonialsBR = [
+  {
+    name: 'Rafaella Giovanna',
+    description: 'Gerente de Produto',
+    image: '/assets/testimonial-1.webp',
+    message:
+      'A eficiência e a atenção aos detalhes da Innova foram essenciais para o nosso sucesso. Como Gerente de Produto, vi de perto o quão bem eles entregam os projetos, sempre superando nossas expectativas. A capacidade deles de se adaptar e se comunicar efetivamente teve um grande impacto no desempenho da nossa equipe.',
+  },
+  {
+    name: 'Wilton Carvalho',
+    description: 'Artista',
+    image: '/assets/testimonial-2.webp',
+    message:
+      'Trabalhar com a Innova foi uma experiência verdadeiramente inspiradora. Como artista, valorizo a criatividade e a atenção aos detalhes, e a equipe deles superou todas as expectativas. A eficiência e o compromisso com o projeto tornaram o processo suave e agradável. Recomendo altamente os serviços deles.',
+  },
+  {
+    name: 'Welton Carvalho',
+    description: 'Fotógrafo',
+    image: '/assets/testimonial-3.webp',
+    message:
+      'Trabalhar com a Innova foi um divisor de águas para mim. Eles abordaram meu projeto com uma compreensão clara das minhas necessidades e entregaram resultados de alta qualidade. A capacidade deles de executar rapidamente sem sacrificar a criatividade é algo que eu realmente valorizo.',
+  },
+];
 ---
 
 <section class="py-16 sm:py-20">
   <div class="v mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col items-center gap-12 lg:gap-20">
-      <h2 class="mx-auto max-w-xl text-center text-3xl font-medium tracking-tight sm:text-4xl">
+      <h2
+        class="mx-auto max-w-xl text-center text-3xl font-medium tracking-tight sm:text-4xl"
+        x-show="$store.language.current === 'en'"
+      >
         Well done job that creates impact
       </h2>
+      <h2
+        class="mx-auto max-w-xl text-center text-3xl font-medium tracking-tight sm:text-4xl"
+        x-show="$store.language.current === 'pt'"
+      >
+        Trabalho bem feito que cria impacto
+      </h2>
       <div
-        class="divide-primary-900/10 dark:divide-primary-300/10 grid divide-y lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+        class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+        x-show="$store.language.current === 'en'"
       >
         {
           testimonials.map((testimonial) => (
@@ -39,7 +73,7 @@ const testimonials = [
               <div class="flex flex-row gap-2">
                 {[...Array(5)].map(() => (
                   <svg
-                    class="text-primary-600 dark:text-primary-400 h-6 w-6"
+                    class="h-6 w-6 text-primary-600 dark:text-primary-400"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
@@ -49,14 +83,50 @@ const testimonials = [
                   </svg>
                 ))}
               </div>
-              <blockquote class="text-primary-950/70 dark:text-primary-200/70 text-center text-md italic leading-loose">
+              <blockquote class="text-md text-center italic leading-loose text-primary-950/70 dark:text-primary-200/70">
                 <p>{testimonial.message}</p>
               </blockquote>
               <figcaption class="flex flex-col gap-4">
                 <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.image} alt="" />
                 <div class="text-center">
                   <div class="text-base font-medium">{testimonial.name}</div>
-                  <div class="text-primary-950/70 dark:text-primary-200/70 text-sm">
+                  <div class="text-sm text-primary-950/70 dark:text-primary-200/70">
+                    {testimonial.description}
+                  </div>
+                </div>
+              </figcaption>
+            </figure>
+          ))
+        }
+      </div>
+      <div
+        class="grid divide-y divide-primary-900/10 dark:divide-primary-300/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0"
+        x-show="$store.language.current === 'pt'"
+      >
+        {
+          testimonialsBR.map((testimonial) => (
+            <figure class="mx-auto flex max-w-lg flex-col items-center gap-6 py-8 lg:px-8 lg:py-0">
+              <div class="flex flex-row gap-2">
+                {[...Array(5)].map(() => (
+                  <svg
+                    class="h-6 w-6 text-primary-600 dark:text-primary-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12.0006 18.26L4.94715 22.2082L6.52248 14.2799L0.587891 8.7918L8.61493 7.84006L12.0006 0.5L15.3862 7.84006L23.4132 8.7918L17.4787 14.2799L19.054 22.2082L12.0006 18.26Z" />
+                  </svg>
+                ))}
+              </div>
+              <blockquote class="text-md text-center italic leading-loose text-primary-950/70 dark:text-primary-200/70">
+                <p>{testimonial.message}</p>
+              </blockquote>
+              <figcaption class="flex flex-col gap-4">
+                <img class="mx-auto h-8 w-8 rounded-full" src={testimonial.image} alt="" />
+                <div class="text-center">
+                  <div class="text-base font-medium">{testimonial.name}</div>
+                  <div class="text-sm text-primary-950/70 dark:text-primary-200/70">
                     {testimonial.description}
                   </div>
                 </div>
