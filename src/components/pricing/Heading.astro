@@ -1,9 +1,32 @@
+
+
+
+
+---
+import Slider from '../slider/Slider';
+
+const images = [
+  'https://fastly.picsum.photos/id/9/5000/3269.jpg?hmac=cZKbaLeduq7rNB8X-bigYO8bvPIWtT-mh8GRXtU3vPc',
+  'https://fastly.picsum.photos/id/10/2500/1667.jpg?hmac=J04WWC_ebchx3WwzbM-Z4_KC_LeLBWr5LZMaAkWkF68',
+  'https://fastly.picsum.photos/id/22/4434/3729.jpg?hmac=fjZdkSMZJNFgsoDh8Qo5zdA_nSGUAWvKLyyqmEt2xs0',
+];
+
+const slides = [
+  { image: "https://via.placeholder.com/800x400?text=Slide+1", alt: "Slide 1" },
+  { image: "https://via.placeholder.com/800x400?text=Slide+2", alt: "Slide 2" },
+  { image: "https://via.placeholder.com/800x400?text=Slide+3", alt: "Slide 3" },
+];
+
+---
+
+
 <section class="py-16 sm:py-20">
   <div class="mx-auto max-w-2xl px-4 text-center sm:px-6 lg:max-w-7xl lg:px-8">
     <div class="flex flex-col gap-4 sm:gap-6">
       <h1 class="text-4xl font-medium tracking-tight sm:text-5xl lg:text-6xl">Pricing</h1>
+      <!-- <Slider client:load images={images} /> -->
+      <Slider client:load slides={slides} />
       <p class="text-primary-950/70 dark:text-primary-200/70 mx-auto max-w-xl text-lg sm:text-xl">
-        Choose the plan that best suits your needs.
       </p>
     </div>
   </div>
